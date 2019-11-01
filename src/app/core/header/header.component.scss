@@ -1,0 +1,11 @@
+.header {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: gray;
+    min-height: 50px;
+    &__login {
+        font-size: 2rem;
+    }
+}
