@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./controls.component.scss']
 })
 export class ControlsComponent implements OnInit {
-
   constructor() { }
 
+  onSearch(value) {
+    console.log(value);
+  }
   ngOnInit() {
   }
-
 }

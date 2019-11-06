@@ -1,1 +1,16 @@
-<p>{{ courseItem.title }}</p>
+<div class="course-item">
+  <div class="course-item__info">
+    <p class="course-item__title">{{ courseItem.title }}</p>
+    <div class="course-item__dates-wrapper">
+      <p class="course-item__duration">{{courseItem.duration}}</p>
+      <p class="course-item__date">{{courseItem.creationDate}}</p>
+    </div>
+  </div>
+  <div class="course-item__description">
+    <p class="course-item__description-text">{{courseItem.description}}</p>
+    <div class="course-item__buttons-wrapper">
+      <button class="course-item__button">Edit</button>
+      <button (click)="onDelete(courseItem.id)" class="course-item__button">Delete</button>
+    </div>
+  </div>
+</div>

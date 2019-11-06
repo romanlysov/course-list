@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AddCourseButtonComponent implements OnInit {
 
   constructor() { }
-
+  public buttonText = '+ Add course';
   ngOnInit() {
   }
 
