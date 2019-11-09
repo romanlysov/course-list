@@ -4,5 +4,5 @@
     [courseItem] = "item"
     (logCourseId)="log($event)"
   ></app-course-item>
-  <app-load-more [onLoad]="loadMore"></app-load-more>
+  <app-load-more (loadMore)="loadMoreHandler()"></app-load-more>
 </section>

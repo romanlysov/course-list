@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./auth.component.scss']
 })
 export class AuthComponent implements OnInit {
-  public user = 'User login';
+  public user: string = 'User login';
   constructor() { }
 
   ngOnInit() {

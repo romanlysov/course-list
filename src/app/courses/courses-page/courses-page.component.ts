@@ -50,8 +50,8 @@ export class CoursesPageComponent implements OnInit, OnChanges {
   log(course) {
     console.log(course);
   }
-  loadMore(event) {
-    event.preventDefault();
+
+  loadMoreHandler() {
     console.log('loaded more courses');
   }
 }

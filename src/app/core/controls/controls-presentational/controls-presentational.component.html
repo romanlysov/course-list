@@ -1,11 +1,11 @@
 <div class="search">
   <input
+    [(ngModel)]="value"
     type="text"
     class="search__input"
     title="Text to search"
-    placeholder="Text to search"
-    [(ngModel)]="value"
+    placeholder="angular"
   >
-  <button class="search__button" (click)="onSearch(value)">Search</button>
+  <button class="search__button" (click)="search(value)">Search</button>
 </div>
 

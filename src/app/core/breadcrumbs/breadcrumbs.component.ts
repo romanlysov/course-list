@@ -9,7 +9,7 @@ export class BreadcrumbsComponent implements OnInit {
 
   constructor() { }
   @Input() breadCrumb: string;
-  public breadCrumbPath = 'Courses';
+  public breadCrumbPath: string = 'Courses';
   ngOnInit() {
   }
 

@@ -15,7 +15,7 @@ export class CourseItemComponent implements OnInit {
   ngOnInit() {
   }
 
-  onDelete(courseId) {
+  deleteCourse(courseId) {
     this.logCourseId.emit(courseId);
   }
 }

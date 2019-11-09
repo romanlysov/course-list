@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 
 import { ControlsPresentationalComponent } from './controls-presentational.component';
 
@@ -8,6 +9,9 @@ describe('ControlsPresentationalComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        FormsModule,
+      ],
       declarations: [ ControlsPresentationalComponent ]
     })
     .compileComponents();
