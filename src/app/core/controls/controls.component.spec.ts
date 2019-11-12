@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 
 import { ControlsComponent } from './controls.component';
 import {ControlsPresentationalComponent} from './controls-presentational/controls-presentational.component';
-import {AddCourseButtonComponent} from '../add-course-button/add-course-button.component';
+import {AddCourseButtonComponent} from './add-course-button/add-course-button.component';
 
 describe('ControlsComponent', () => {
   let component: ControlsComponent;

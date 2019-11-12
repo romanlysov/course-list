@@ -1,8 +1,9 @@
 <section class="courses">
   <app-course-item
-    *ngFor="let item of courseItems"
+    *ngFor="let item of searchedCourses"
     [courseItem] = "item"
     (logCourseId)="log($event)"
   ></app-course-item>
   <app-load-more (loadMore)="loadMoreHandler()"></app-load-more>
+  <app-no-data *ngIf="!courseItems || courseItems.length === 0"></app-no-data>
 </section>
