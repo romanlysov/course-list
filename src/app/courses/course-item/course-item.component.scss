@@ -26,11 +26,33 @@
   left: 0;
 }
 
-.course-item {
-  background-color: #ffffff;
+%course-item-shared {
+  position: relative;
   margin-bottom: 20px;
   padding: 10px;
   border-radius: 5px;
+  border: solid 2px;
+}
+
+.course-item {
+  @extend %course-item-shared;
+  background-color: #ffffff;
+
+  &__top {
+    @extend %course-item-shared;
+    background-color: #fff694;
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 20px;
+      height: 20px;
+      top: 30px;
+      left: 215px;
+      background: center/contain no-repeat url("../../../assets/images/star.png");
+    }
+
+  }
   &__info {
     display: flex;
     flex-wrap: nowrap;

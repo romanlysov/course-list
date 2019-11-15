@@ -5,7 +5,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { ControlsComponent } from './controls/controls.component';
-import { AddCourseButtonComponent } from './add-course-button/add-course-button.component';
+import { AddCourseButtonComponent } from './controls/add-course-button/add-course-button.component';
 import { LogoComponent } from './logo/logo.component';
 import { AuthComponent } from './auth/auth.component';
 import { ControlsPresentationalComponent } from './controls/controls-presentational/controls-presentational.component';

@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'course-list';
+  public query: string;
+  searchHandler(query) {
+    this.query = query;
+  }
 }

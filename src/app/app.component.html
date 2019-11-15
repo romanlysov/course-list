@@ -1,5 +1,5 @@
 <app-header></app-header>
 <app-breadcrumbs></app-breadcrumbs>
-<app-controls></app-controls>
-<app-courses-page></app-courses-page>
+<app-controls (searchQuery)="searchHandler($event)"></app-controls>
+<app-courses-page [searchValue]="query"></app-courses-page>
 <app-footer></app-footer>

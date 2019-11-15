@@ -7,8 +7,10 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 })
 export class ControlsComponent implements OnInit {
   constructor() { }
+  @Output() searchQuery = new EventEmitter();
   searchHandler(value) {
     console.log(value);
+    this.searchQuery.emit(value);
   }
   ngOnInit() {
   }
