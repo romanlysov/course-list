@@ -1,0 +1,19 @@
+<app-header></app-header>
+<section class="login">
+  <form class="login-form">
+    <h2 class="login-form__header">Login</h2>
+    <div class="login-form__inputs-wrapper">
+      <label class="login-form__label"> Email:
+        <input class="login-form__input-field" [(ngModel)]="login" name="login" type="text"/>
+      </label>
+      <label class="login-form__label"> Password:
+        <input class="login-form__input-field" type="password" [(ngModel)]="password" name="pass" />
+      </label>
+    </div>
+    <div class="login-form__controls">
+    <a class="login-form__link" href="javascript:void(0)">Forgot password?</a>
+    <button class="login-form__button" type="submit" (click)="loginHandler(login, password)">Login</button>
+    </div>
+  </form>
+</section>
+<app-footer></app-footer>

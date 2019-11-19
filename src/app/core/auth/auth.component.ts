@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-auth',
@@ -6,9 +6,14 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./auth.component.scss']
 })
 export class AuthComponent implements OnInit {
-  public user: string = 'User login';
+  @Output() logOff = new EventEmitter();
+  public userName: string = 'User login';
   constructor() { }
 
   ngOnInit() {
+  }
+
+  logOffEmitter() {
+    this.logOff.emit();
   }
 }

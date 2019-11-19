@@ -1,4 +1,4 @@
 <div class="auth">
-  <span class="auth__username">{{user}}</span>
-  <span class="auth__log-off">Log off</span>
+  <a routerLink="login" class="auth__username">{{userName}}</a>
+  <span class="auth__log-off" (click)="logOffEmitter($event)">Log off</span>
 </div>
