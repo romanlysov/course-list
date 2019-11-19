@@ -7,6 +7,8 @@ import { AuthorizationService } from '../../core/authorization.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  public login: string;
+  public password: string;
   constructor(private authService: AuthorizationService) { }
   loginHandler(login, pass) {
     console.log(login + ' logged in successfully');

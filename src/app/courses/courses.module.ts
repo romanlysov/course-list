@@ -23,6 +23,6 @@ import { DeleteCourseModalComponent } from './delete-course-modal/delete-course-
   imports: [
     CommonModule
   ],
-exports: [CoursesPageComponent, SearchCoursePipe]
+exports: [CoursesPageComponent, SearchCoursePipe, CourseDurationPipe]
 })
 export class CoursesModule { }

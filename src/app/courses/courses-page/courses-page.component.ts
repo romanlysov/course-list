@@ -10,9 +10,9 @@ import { CoursesService } from '../courses.service';
   providers: [SearchCoursePipe]
 })
 export class CoursesPageComponent implements OnInit, OnChanges {
-  private courseItems: CourseItem[];
-  private showModal: boolean = false;
+  public showModal: boolean = false;
   private deletedCourseId: string;
+  public courseItems: CourseItem[];
   public searchedCourses: CourseItem[];
 
   @Input() searchValue: string;
