@@ -2,6 +2,7 @@ import { Component, OnInit, OnChanges, Input } from '@angular/core';
 import { CourseItem } from '../course-item.model';
 import { SearchCoursePipe } from './search-course.pipe';
 import { CoursesService } from '../courses.service';
+import { AuthorizationService } from '../../core/authorization.service';
 
 @Component({
   selector: 'app-courses-page',
@@ -11,13 +12,18 @@ import { CoursesService } from '../courses.service';
 })
 export class CoursesPageComponent implements OnInit, OnChanges {
   public showModal: boolean = false;
+  public isAuthorized: boolean;
   private deletedCourseId: string;
   public courseItems: CourseItem[];
   public searchedCourses: CourseItem[];
 
   @Input() searchValue: string;
 
-  constructor(private search: SearchCoursePipe, private coursesService: CoursesService) {
+  constructor(
+    private search: SearchCoursePipe,
+    private coursesService: CoursesService,
+    private authService: AuthorizationService
+  ) {
     console.log('constructor');
   }
 
@@ -25,6 +31,7 @@ export class CoursesPageComponent implements OnInit, OnChanges {
     console.log('ngOnInit');
     this.getCourses();
     this.searchedCourses = this.courseItems;
+    this.isAuthorized = this.authService.isAuthenticated();
   }
 
   ngOnChanges(changes) {

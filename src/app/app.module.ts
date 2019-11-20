@@ -9,6 +9,7 @@ import { CoursesModule } from './courses/courses.module';
 import { LoginPageModule } from './login-page/login-page.module';
 import { MainPageComponent } from './main-page/main-page.component';
 import { AddCoursePageModule } from './add-course-page/add-course-page.module';
+import { CoursesGuard } from './courses/courses.guard';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { AddCoursePageModule } from './add-course-page/add-course-page.module';
     LoginPageModule,
     AddCoursePageModule,
   ],
-  providers: [],
+  providers: [CoursesGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

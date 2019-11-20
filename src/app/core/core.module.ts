@@ -10,6 +10,7 @@ import { LogoComponent } from './logo/logo.component';
 import { AuthComponent } from './auth/auth.component';
 import { ControlsPresentationalComponent } from './controls/controls-presentational/controls-presentational.component';
 import { RouterModule } from '@angular/router';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { RouterModule } from '@angular/router';
     LogoComponent,
     AuthComponent,
     ControlsPresentationalComponent,
+    NotFoundComponent,
   ],
   imports: [
     CommonModule,

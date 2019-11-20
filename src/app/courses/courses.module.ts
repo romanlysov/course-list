@@ -8,6 +8,7 @@ import { NoDataComponent } from './no-data/no-data.component';
 import { CourseDurationPipe } from './course-duration.pipe';
 import { SearchCoursePipe } from './courses-page/search-course.pipe';
 import { DeleteCourseModalComponent } from './delete-course-modal/delete-course-modal.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -18,10 +19,11 @@ import { DeleteCourseModalComponent } from './delete-course-modal/delete-course-
     NoDataComponent,
     CourseDurationPipe,
     SearchCoursePipe,
-    DeleteCourseModalComponent
+    DeleteCourseModalComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
   ],
 exports: [CoursesPageComponent, SearchCoursePipe, CourseDurationPipe]
 })

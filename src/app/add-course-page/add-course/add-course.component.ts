@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
+import { CourseItem } from '../../courses/course-item.model';
+import { CoursesService } from '../../courses/courses.service';
+
 
 @Component({
   selector: 'app-add-course',
@@ -6,13 +10,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-course.component.scss']
 })
 export class AddCourseComponent implements OnInit {
-
-  constructor() { }
+  public course?: CourseItem;
+  constructor(private route: ActivatedRoute, private router: Router, private coursesService: CoursesService) { }
 
   ngOnInit() {
+    this.route.params.subscribe((params: {id: number}) => {
+      if (params.id) {
+        const id = params.id.toString();
+        this.course = this.coursesService.getItemById(id);
+      }
+    });
+    console.log(this.course);
   }
 
-  saveHandler() {}
+  saveHandler() {
+    if (this.course) {
+      this.coursesService.updateItem(this.course);
+    }
+    this.router.navigate(['/courses']);
+  }
 
-  cancelHandler() {}
+  cancelHandler() {
+    this.router.navigate(['/courses']);
+  }
 }

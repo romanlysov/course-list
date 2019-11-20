@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-duration-input',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./duration-input.component.scss']
 })
 export class DurationInputComponent implements OnInit {
-  public duration: string;
+  @Input() duration: string;
   constructor() { }
 
   ngOnInit() {

@@ -1,14 +1,15 @@
 <app-header></app-header>
+<app-breadcrumbs></app-breadcrumbs>
 <section class="add">
   <form class="add__form">
     <label class="add__label">Title
-      <input class="add__text-input" type="text" name="title"/>
+      <input class="add__text-input" type="text" name="title" value="{{course ? course.title : ''}}"/>
     </label>
     <label class="add__label">Description
-      <textarea class="add__area"></textarea>
+      <textarea class="add__area" value="{{course ? course.description : ''}}"></textarea>
     </label>
-    <app-date-input></app-date-input>
-    <app-duration-input></app-duration-input>
+    <app-date-input [date]="course ? course.creationDate : ''"></app-date-input>
+    <app-duration-input [duration]="course ? course.duration : ''"></app-duration-input>
     <div class="add__buttons-wrapper">
       <button (click)="saveHandler()" class="add__button">Save</button>
       <button (click)="cancelHandler()" class="add__button">Cancel</button>
