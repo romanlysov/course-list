@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-controls',
@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./controls.component.scss']
 })
 export class ControlsComponent implements OnInit {
-
   constructor() { }
-
+  @Output() searchQuery = new EventEmitter();
+  searchHandler(value) {
+    console.log(value);
+    this.searchQuery.emit(value);
+  }
   ngOnInit() {
   }
-
 }

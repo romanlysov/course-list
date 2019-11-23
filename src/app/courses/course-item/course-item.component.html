@@ -1,1 +1,19 @@
-<p>{{ courseItem.title }}</p>
+<div
+  [appColorBorder]="courseItem.creationDate"
+  [ngClass]="{'course-item__top': courseItem.topRated, 'course-item': !courseItem.topRated}"
+>
+  <div class="course-item__info">
+    <p class="course-item__title">{{ courseItem.title | uppercase }}</p>
+    <div class="course-item__dates-wrapper">
+      <p class="course-item__duration">{{courseItem.duration | courseDuration}}</p>
+      <p class="course-item__date">{{courseItem.creationDate | date}}</p>
+    </div>
+  </div>
+  <div class="course-item__description">
+    <p class="course-item__description-text">{{courseItem.description}}</p>
+    <div class="course-item__buttons-wrapper">
+      <button class="course-item__button">Edit</button>
+      <button (click)="deleteCourse(courseItem.id)" class="course-item__button">Delete</button>
+    </div>
+  </div>
+</div>

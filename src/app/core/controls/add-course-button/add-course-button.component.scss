@@ -1,0 +1,21 @@
+.add-course {
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: #dedede;
+  padding: 0 100px;
+  &__button {
+    margin-left: auto;
+    margin-bottom: 10px;
+    background-color: #05c1f5;
+    width: 175px;
+    height: 40px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    border: none;
+    text-decoration: none;
+    line-height: 40px;
+    text-align: center;
+  }
+}
+

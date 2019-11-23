@@ -1,0 +1,18 @@
+.duration-input {
+  &__input {
+    width: 15%;
+    display: block;
+    margin-bottom: 15px;
+  }
+  &__label {
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+  }
+  &__wrapper {
+    display: flex;
+  }
+  &__caption {
+    margin-left: 10px;
+  }
+}
