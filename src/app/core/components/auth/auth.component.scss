@@ -1,0 +1,41 @@
+%auth-text-shared {
+  position: relative;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 50px;
+  cursor: pointer;
+}
+
+%icon-pseudo-shared {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  top: 10px;
+  left: -33px;
+}
+
+.auth {
+  width: 180px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  &__username {
+    @extend %auth-text-shared;
+    text-decoration: none;
+
+    &:before {
+     @extend %icon-pseudo-shared;
+     background: center/contain no-repeat  url("../../../../assets/images/user.png");
+    }
+  }
+  &__log-off {
+    @extend %auth-text-shared;
+    &:before {
+      @extend %icon-pseudo-shared;
+      background: center/contain no-repeat  url("../../../../assets/images/log-off.png");
+    }
+  }
+}

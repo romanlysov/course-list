@@ -1,0 +1,21 @@
+.logo {
+  position: relative;
+  margin-left: 35px;
+  font-family: Arial, sans-serif;
+  font-size: 26px;
+  text-transform: uppercase;
+  color: #ffffff;
+  line-height: 50px;
+  text-decoration: none;
+
+  &:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: -33px;
+    background: center/contain no-repeat  url("../../../../assets/images/logo.png");
+  }
+}

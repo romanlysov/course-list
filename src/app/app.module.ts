@@ -1,29 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire//database';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { CoursesModule } from './courses/courses.module';
-import { LoginPageModule } from './login-page/login-page.module';
-import { MainPageComponent } from './main-page/main-page.component';
-import { AddCoursePageModule } from './add-course-page/add-course-page.module';
-import { CoursesGuard } from './courses/courses.guard';
+import { LoginModule } from './login/login.module';
+import { AddCourseModule } from './add-course/add-course.module';
+import { CoursesGuard } from './core/guards/courses.guard';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainPageComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     FormsModule,
     AppRoutingModule,
     CoreModule,
     CoursesModule,
-    LoginPageModule,
-    AddCoursePageModule,
+    LoginModule,
+    AddCourseModule,
+    AngularFireModule.initializeApp(environment.firebase, 'courses-list'),
+    AngularFireDatabaseModule,
   ],
   providers: [CoursesGuard],
   bootstrap: [AppComponent],

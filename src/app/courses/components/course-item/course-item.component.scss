@@ -1,0 +1,129 @@
+%text-style-shared {
+  position: relative;
+  margin-right: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #313131;
+}
+
+%icon-shared {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  top: -2px;
+  left: -24px;
+}
+
+%button-icon-shared {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  top: 3px;
+  left: 0;
+}
+
+%course-item-shared {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: solid 2px;
+}
+
+.course-item {
+  @extend %course-item-shared;
+  background-color: #ffffff;
+
+  &__top {
+    @extend %course-item-shared;
+    background-color: #fff694;
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 20px;
+      height: 20px;
+      top: 30px;
+      left: 215px;
+      background: center/contain no-repeat url("../../../../assets/images/star.png");
+    }
+
+  }
+  &__info {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 75%;
+  }
+  &__title {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  &__dates-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+  &__duration {
+    @extend %text-style-shared;
+    &:before {
+      @extend %icon-shared;
+      background: center/contain no-repeat url("../../../../assets/images/duration.png");
+    }
+  }
+  &__date {
+    @extend %text-style-shared;
+    margin-left: 60px;
+    &:before {
+      @extend %icon-shared;
+      background: center/contain no-repeat url("../../../../assets/images/date.png");
+    }
+  }
+  &__description {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  &__description-text {
+    width: 75%;
+    font-family: Arial sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: #313131;
+  }
+  &__button {
+    position: relative;
+    margin-right: 25px;
+    border: none;
+    background-color: #05c1f5;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 10px 25px 10px 30px;
+    margin-top: 10px;
+    &:nth-child(1) {
+      &:before {
+        @extend %button-icon-shared;
+        background: center/contain no-repeat url("../../../../assets/images/edit.png");
+      }
+    }
+    &:nth-child(2) {
+      &:before {
+        @extend %button-icon-shared;
+        background: center/contain no-repeat url("../../../../assets/images/delete.png");
+      }
+    }
+  }
+  &__buttons-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}

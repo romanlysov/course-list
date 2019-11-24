@@ -2,17 +2,17 @@ import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './core/header/header.component';
+import { HeaderComponent } from './core/components/header/header.component';
 import { BreadcrumbsComponent } from './core/breadcrumbs/breadcrumbs.component';
-import { ControlsComponent } from './core/controls/controls.component';
-import { CoursesPageComponent } from './courses/courses-page/courses-page.component';
-import { FooterComponent } from './core/footer/footer.component';
-import { LogoComponent } from './core/logo/logo.component';
+import { ControlsComponent } from './core/components/controls/controls.component';
+import { CoursesListComponent } from './courses/components/courses-list/courses-list.component';
+import { FooterComponent } from './core/components/footer/footer.component';
+import { LogoComponent } from './core/components/logo/logo.component';
 import { AuthComponent } from './core/auth/auth.component';
-import { ControlsPresentationalComponent } from './core/controls/controls-presentational/controls-presentational.component';
-import { AddCourseButtonComponent } from './core/controls/add-course-button/add-course-button.component';
-import { CourseItemComponent } from './courses/course-item/course-item.component';
-import { LoadMoreComponent } from './courses/load-more/load-more.component';
+import { ControlsPresentationalComponent } from './core/components/controls/controls-presentational/controls-presentational.component';
+import { AddCourseButtonComponent } from './core/components/controls/add-course-button/add-course-button.component';
+import { CourseItemComponent } from './courses/components/course-item/course-item.component';
+import { LoadMoreComponent } from './courses/components/load-more/load-more.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -27,7 +27,7 @@ describe('AppComponent', () => {
         HeaderComponent,
         BreadcrumbsComponent,
         ControlsComponent,
-        CoursesPageComponent,
+        CoursesListComponent,
         FooterComponent,
         LogoComponent,
         ControlsPresentationalComponent,
