@@ -7,6 +7,7 @@ import { ColorBorderDirective } from './course-item/color-border.directive';
 import { NoDataComponent } from './no-data/no-data.component';
 import { CourseDurationPipe } from './course-duration.pipe';
 import { SearchCoursePipe } from './courses-page/search-course.pipe';
+import { DeleteCourseModalComponent } from './delete-course-modal/delete-course-modal.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +17,12 @@ import { SearchCoursePipe } from './courses-page/search-course.pipe';
     ColorBorderDirective,
     NoDataComponent,
     CourseDurationPipe,
-    SearchCoursePipe
+    SearchCoursePipe,
+    DeleteCourseModalComponent
   ],
   imports: [
     CommonModule
   ],
-exports: [CoursesPageComponent, SearchCoursePipe]
+exports: [CoursesPageComponent, SearchCoursePipe, CourseDurationPipe]
 })
 export class CoursesModule { }

@@ -7,6 +7,7 @@ import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 })
 export class ControlsPresentationalComponent implements OnInit {
   @Output() searchValue = new EventEmitter();
+  public value: string;
   constructor() { }
 
   ngOnInit() {

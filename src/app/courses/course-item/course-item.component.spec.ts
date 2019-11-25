@@ -68,7 +68,7 @@ describe('CourseItemComponent Stand-alone test', () => {
     expect(courseItemEl.querySelector('.course-item__title').textContent).toContain(courseItemMock.title);
   });
   it('should emit Delete click (output)', () => {
-    cut.logCourseId.subscribe(l => {
+    cut.deletedCourseId.subscribe(l => {
       expect(l).toEqual(courseItemMock.id);
     });
     cut.deleteCourse(courseItemMock.id);

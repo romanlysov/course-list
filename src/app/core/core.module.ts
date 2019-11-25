@@ -9,6 +9,7 @@ import { AddCourseButtonComponent } from './controls/add-course-button/add-cours
 import { LogoComponent } from './logo/logo.component';
 import { AuthComponent } from './auth/auth.component';
 import { ControlsPresentationalComponent } from './controls/controls-presentational/controls-presentational.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -19,17 +20,18 @@ import { ControlsPresentationalComponent } from './controls/controls-presentatio
     AddCourseButtonComponent,
     LogoComponent,
     AuthComponent,
-    ControlsPresentationalComponent
+    ControlsPresentationalComponent,
   ],
   imports: [
     CommonModule,
     FormsModule,
+    RouterModule,
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
     BreadcrumbsComponent,
-    ControlsComponent
+    ControlsComponent,
   ]
 })
 export class CoreModule { }

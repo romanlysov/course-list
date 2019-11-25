@@ -1,0 +1,47 @@
+%add__input-shared {
+  width: 100%;
+  display: block;
+  margin-bottom: 15px;
+}
+.add {
+  padding: 10px 100px;
+  min-height: 100vh;
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 0 auto;
+    border: 2px solid #b5b5b5;
+    padding: 10px;
+  }
+    &__label {
+      display: block;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 16px;
+    }
+  &__text-input {
+    @extend %add__input-shared;
+    &--short {
+      @extend %add__input-shared;
+      width: 15%;
+    }
+  }
+  &__area {
+    @extend %add__input-shared;
+    height: 15vh;
+  }
+  &__button {
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    padding: 10px 30px;
+    margin-right: 10px;
+  }
+  &__duration-wrapper {
+    display: flex;
+  }
+  &__caption {
+    margin-left: 10px;
+  }
+}
+
