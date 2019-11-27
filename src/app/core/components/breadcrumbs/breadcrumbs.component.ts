@@ -16,7 +16,6 @@ export class BreadcrumbsComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe((params: {id: number}) => {
-      console.log('crumbs', params.id);
       if (params.id) {
         const id = params.id.toString();
         this.coursesService.getItemById(id).subscribe((res: CourseItem) => {

@@ -11,6 +11,7 @@ import { AuthComponent } from './components/auth/auth.component';
 import { ControlsPresentationalComponent } from './components/controls/controls-presentational/controls-presentational.component';
 import { RouterModule } from '@angular/router';
 import { NotFoundComponent } from '../not-found/components/not-found-template/not-found-template.component';
+import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { NotFoundComponent } from '../not-found/components/not-found-template/no
     AuthComponent,
     ControlsPresentationalComponent,
     NotFoundComponent,
+    LoaderComponent,
   ],
   imports: [
     CommonModule,
@@ -34,6 +36,7 @@ import { NotFoundComponent } from '../not-found/components/not-found-template/no
     FooterComponent,
     BreadcrumbsComponent,
     ControlsComponent,
+    LoaderComponent,
   ]
 })
 export class CoreModule { }

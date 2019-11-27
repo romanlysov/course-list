@@ -30,10 +30,10 @@ export class AuthorizationService {
 
   getUserInfo() {
     const userToken = localStorage.getItem('token');
-    this.http.post(
+    return this.http.post(
       `${endpoints.auth}lookup?key=${environment.firebase.apiKey}`,
       {idToken: userToken}
-    ).subscribe((res: UserDataResponse) => res);
+    );
   }
 
   setUserToken(token) {
