@@ -1,13 +1,15 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
-import { CourseItem } from '../../../shared/models/course-item.model';
 import { HttpClient } from '@angular/common/http';
+
+import { CourseItem } from '../../../shared/models/course-item.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CoursesService {
-  constructor(private db: AngularFireDatabase, private http: HttpClient ) {}
+  constructor(private db: AngularFireDatabase, private http: HttpClient) {
+  }
 
   private coursesEndpointPath: string = 'https://courses-list.firebaseio.com/courses/-LuSYgIZ1GzC4jO1npMb';
   private coursesEndpoint: string = `${this.coursesEndpointPath}.json`;
@@ -62,14 +64,13 @@ export class CoursesService {
           orderBy: '\"title\"',
           equalTo: `\"${query}\"`,
         }
-    }
+      }
     );
   }
 
   public createCourse(course) {
-    console.log(course);
     const courseRef = this.db.list('courses/-LuSYgIZ1GzC4jO1npMb');
-    return courseRef.update( (course.id).toString(), course);
+    return courseRef.update((course.id).toString(), course);
   }
 
   public getItemById(id: string) {
@@ -78,6 +79,15 @@ export class CoursesService {
         headers: this.corsHeaders,
       });
   }
+
+  public filterNull(list) {
+    if (Array.isArray(list)) {
+      return list.filter(elem => elem);
+    }
+    return list;
+  }
 }
+
+
 
 

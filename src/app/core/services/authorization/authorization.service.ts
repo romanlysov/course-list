@@ -3,19 +3,19 @@ import { HttpClient } from '@angular/common/http';
 
 import { endpoints } from './endpoints';
 import { environment } from '../../../../environments/environment';
-import { UserDataResponse } from '../../../shared/models/authorization.model';
-
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthorizationService {
   private isAuth: boolean;
-  constructor(private http: HttpClient) { }
+
+  constructor(private http: HttpClient) {
+  }
 
   logIn(userInfo) {
     return this.http.post(`${endpoints.auth}signInWithPassword?key=${environment.firebase.apiKey}`,
-      {email: userInfo.login, password: userInfo.pass, returnSecureToken: true });
+      {email: userInfo.login, password: userInfo.pass, returnSecureToken: true});
   }
 
   logOut() {
@@ -38,9 +38,5 @@ export class AuthorizationService {
 
   setUserToken(token) {
     localStorage.setItem('token', token);
-  }
-
-  removeUserToken() {
-    localStorage.removeItem('token');
   }
 }

@@ -1,4 +1,4 @@
-<div  *ngIf="isLoading" class="loader">
+<div  *ngIf="isLoading$ | async" class="loader">
   <div class="loader__content">
     <p class="loader__text">Loading...</p>
   </div>

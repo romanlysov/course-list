@@ -1,6 +1,5 @@
 import {
   Component,
-  OnInit,
   Input,
   Output,
   EventEmitter,
@@ -20,7 +19,8 @@ export class CourseItemComponent {
   @Input() public courseItem: CourseItem;
   @Output() public deletedCourseId = new EventEmitter<string>();
 
-  constructor() { }
+  constructor() {
+  }
 
   deleteCourse(courseId) {
     this.deletedCourseId.emit(courseId);

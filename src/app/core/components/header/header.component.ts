@@ -1,7 +1,7 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { AuthorizationService } from '../../services/authorization/authorization.service';
-import {Router} from '@angular/router';
-import {AuthResponse} from '../../../shared/models/authorization.model';
+import { Router } from '@angular/router';
+import { AuthResponse } from '../../../shared/models/authorization.model';
 
 @Component({
   selector: 'app-header',
@@ -13,7 +13,9 @@ export class HeaderComponent implements OnInit {
   @Output() private isAuth = new EventEmitter();
 
   public userName: string;
-  constructor(private authService: AuthorizationService, private router: Router) { }
+
+  constructor(private authService: AuthorizationService, private router: Router) {
+  }
 
   ngOnInit() {
     this.authService.getUserInfo();
