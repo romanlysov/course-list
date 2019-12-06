@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
-import { ControlsComponent } from './controls/controls.component';
-import { AddCourseButtonComponent } from './controls/add-course-button/add-course-button.component';
-import { LogoComponent } from './logo/logo.component';
-import { AuthComponent } from './auth/auth.component';
-import { ControlsPresentationalComponent } from './controls/controls-presentational/controls-presentational.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
+import { ControlsComponent } from './components/controls/controls.component';
+import { AddCourseButtonComponent } from './components/controls/add-course-button/add-course-button.component';
+import { LogoComponent } from './components/logo/logo.component';
+import { AuthComponent } from './components/auth/auth.component';
+import { ControlsPresentationalComponent } from './components/controls/controls-presentational/controls-presentational.component';
 import { RouterModule } from '@angular/router';
+import { NotFoundComponent } from '../not-found/components/not-found-template/not-found-template.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { RouterModule } from '@angular/router';
     LogoComponent,
     AuthComponent,
     ControlsPresentationalComponent,
+    NotFoundComponent,
   ],
   imports: [
     CommonModule,

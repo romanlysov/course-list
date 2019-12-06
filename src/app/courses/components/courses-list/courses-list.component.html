@@ -1,0 +1,10 @@
+<section class="courses">
+  <app-course-item
+    *ngFor="let item of searchedCourses"
+    [courseItem] = "item"
+    (deletedCourseId)="deleteCourseHandler($event)"
+  ></app-course-item>
+  <app-load-more (loadMore)="loadMoreHandler()"></app-load-more>
+  <app-no-data *ngIf="!searchedCourses || searchedCourses.length === 0"></app-no-data>
+  <app-delete-course-modal (modalValue)="modalHandler($event)" *ngIf="showModal"></app-delete-course-modal>
+</section>

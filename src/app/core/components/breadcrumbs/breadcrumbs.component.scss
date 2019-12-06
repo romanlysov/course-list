@@ -1,0 +1,12 @@
+.breadcrumbs {
+  height: 100px;
+  background-color: #ffffff;
+  padding: 0 100px;
+  &__text {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 100px;
+    text-decoration: none;
+  }
+}
