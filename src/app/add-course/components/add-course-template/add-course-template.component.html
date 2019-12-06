@@ -1,7 +1,7 @@
 <app-header></app-header>
 <app-breadcrumbs></app-breadcrumbs>
 <section class="add">
-  <form class="add__form">
+  <form class="add__form" *ngIf="course$ | async as course">
     <label class="add__label">Title
       <input class="add__text-input" type="text" name="title" [(ngModel)]="course.title"/>
     </label>

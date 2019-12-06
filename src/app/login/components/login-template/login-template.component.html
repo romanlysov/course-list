@@ -6,7 +6,7 @@
       <label class="login-form__label"> Email:
         <input class="login-form__input-field" [(ngModel)]="login" name="login" type="text"/>
       </label>
-      <span *ngIf="authError" class="login-form__error-message">Wrong email!</span>
+      <span *ngIf="isLoginFailed$ | async" class="login-form__error-message">Wrong email!</span>
       <label class="login-form__label"> Password:
         <input class="login-form__input-field" type="password" [(ngModel)]="password" name="pass" />
       </label>

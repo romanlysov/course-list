@@ -13,4 +13,5 @@ import { CoreModule } from '../core/core.module';
   ],
   exports: [LoginComponent]
 })
-export class LoginModule { }
+export class LoginModule {
+}

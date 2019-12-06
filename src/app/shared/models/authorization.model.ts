@@ -22,3 +22,13 @@ export interface UserDataResponse {
   createdAt:	string;
   customAuth:	boolean;
 }
+
+export interface UserInfo {
+  login: string;
+  pass: string;
+}
+
+export interface AuthState {
+  isLoggedIn: boolean;
+  userInfo?: UserInfo;
+}

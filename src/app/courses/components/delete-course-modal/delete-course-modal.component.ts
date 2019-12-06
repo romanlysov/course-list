@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-delete-course-modal',
@@ -7,7 +7,9 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 })
 export class DeleteCourseModalComponent implements OnInit {
   @Output() modalValue = new EventEmitter<boolean>();
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
