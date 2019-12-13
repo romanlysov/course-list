@@ -1,3 +1,5 @@
 <label class="date-input__label">Date
-  <input class="date-input__input" type="text" name="date" value="{{date | date}}" [(ngModel)]="date" (keypress)="dateEmitter(date)" />
+  <input class="date-input__input" type="text" name="date"
+    (change)="updateValue($event.target.value)"
+  />
 </label>

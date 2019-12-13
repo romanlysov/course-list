@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './components/login-template/login-template.component';
 import { CoreModule } from '../core/core.module';
@@ -10,6 +10,7 @@ import { CoreModule } from '../core/core.module';
     CommonModule,
     FormsModule,
     CoreModule,
+    ReactiveFormsModule,
   ],
   exports: [LoginComponent]
 })

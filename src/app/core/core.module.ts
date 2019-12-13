@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
@@ -9,7 +11,6 @@ import { AddCourseButtonComponent } from './components/controls/add-course-butto
 import { LogoComponent } from './components/logo/logo.component';
 import { AuthComponent } from './components/auth/auth.component';
 import { ControlsPresentationalComponent } from './components/controls/controls-presentational/controls-presentational.component';
-import { RouterModule } from '@angular/router';
 import { NotFoundComponent } from '../not-found/components/not-found-template/not-found-template.component';
 import { LoaderComponent } from './loader/loader.component';
 

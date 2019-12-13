@@ -12,7 +12,9 @@ export class CoursesService {
   }
 
   private coursesEndpointPath: string = 'https://courses-list.firebaseio.com/courses/-LuSYgIZ1GzC4jO1npMb';
+  private authorsEndpointPath: string = 'https://courses-list.firebaseio.com/authors/-Lvu9lqIpMAjhvpqCrpJ';
   private coursesEndpoint: string = `${this.coursesEndpointPath}.json`;
+  private authorsEndpoint: string = `${this.authorsEndpointPath}.json`;
   private corsHeaders = {
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
@@ -24,9 +26,9 @@ export class CoursesService {
     return keys.map(elem => courses[elem]);
   }
 
-  public pushInitialData(courses: CourseItem[]) {
-    const itemsRef = this.db.list('courses');
-    itemsRef.push(courses);
+  public pushInitialData(data, path) {
+    const itemsRef = this.db.list(path);
+    itemsRef.push(data);
   }
 
   public deleteCourse(id) {
@@ -62,6 +64,18 @@ export class CoursesService {
       {
         params: {
           orderBy: '\"title\"',
+          equalTo: `\"${query}\"`,
+        }
+      }
+    );
+  }
+
+  public getSearchedAuthors(query) {
+    return this.http.get(
+      this.authorsEndpoint,
+      {
+        params: {
+          orderBy: '\"firstName\"',
           equalTo: `\"${query}\"`,
         }
       }

@@ -3,6 +3,11 @@ import { CourseItem } from '../../shared/models/course-item.model';
 
 export interface AddCourseState {
   currentCourse?: CourseItem;
+  author?: {
+    fullName: string;
+    firstName: string;
+    lastName: string;
+  };
 }
 
 export const addCourseReducer = (state: AddCourseState = {currentCourse: null}, action) => {
@@ -13,6 +18,12 @@ export const addCourseReducer = (state: AddCourseState = {currentCourse: null}, 
         currentCourse: action.payload,
       };
     }
+    case AddCourseActionsTypes.getAuthorSuccess: {
+    return {
+      ...state,
+      author: action.payload,
+    };
+  }
     default:
       return state;
   }

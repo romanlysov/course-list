@@ -8,3 +8,8 @@ export const getCurrentCourse = createSelector(
   getCourseState,
   (courseState: AddCourseState) => courseState.currentCourse
 );
+
+export const getAuthor = createSelector(
+  getCourseState,
+  (coursesState: AddCourseState) => coursesState.author
+)

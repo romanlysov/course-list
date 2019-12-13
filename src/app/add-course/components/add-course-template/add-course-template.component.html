@@ -1,16 +1,17 @@
 <app-header></app-header>
 <app-breadcrumbs></app-breadcrumbs>
 <section class="add">
-  <form class="add__form" *ngIf="course$ | async as course">
+  <form class="add__form" *ngIf="course$ | async as course" [formGroup]="courseForm">
     <label class="add__label">Title
-      <input class="add__text-input" type="text" name="title" [(ngModel)]="course.title"/>
+      <input class="add__text-input" type="text" name="title" formControlName="title" />
     </label>
     <label class="add__label">Description
-      <textarea class="add__area" [(ngModel)]="course.description"  name="description"></textarea>
+      <textarea class="add__area" name="description" formControlName="description"></textarea>
     </label>
-    <app-date-input [date]="course ? course.creationDate : ''" (dateValueEmitter)="dateHandler($event)"></app-date-input>
-    <app-duration-input [duration]="course ? course.duration : ''" (durationValue)="durationHandler($event)"></app-duration-input>
+    <app-date-input formControlName="date"></app-date-input>
+    <app-duration-input formControlName="duration"></app-duration-input>
     <app-top-rated-input [isTopRated]="course ? course.topRated : false" (isTopRatedValue)="topRatedHandler($event)"></app-top-rated-input>
+    <app-authors formControlName="author" (searchedAuthor)="searchAuthors($event)"></app-authors>
     <div class="add__buttons-wrapper">
       <button (click)="saveHandler()" class="add__button">Save</button>
       <button (click)="cancelHandler()" class="add__button">Cancel</button>

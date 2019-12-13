@@ -1,0 +1,14 @@
+<div class="author-search__wrapper">
+  <p class="author-search__tip">Tip: try enter some female name, eg "alice", "zoe", "emily", "mia" etc.</p>
+  <label class="author-search__label"> Authors:
+    <input type="text" name="search-author" (input)="searchAuthor($event.target.value)" class="author-search__input">
+  </label>
+  <ul class="author-search__suggestions" *ngIf="isSuggestionsShow">
+    <li *ngFor="let searchedAuthor of author" (click)="updateValue(searchedAuthor.fullName)" class="author-search__suggestions-item">{{searchedAuthor.fullName}}</li>
+  </ul>
+  <ul class="author-search__tags">
+    <li class="author-search__tag" *ngFor="let chosenAuthor of authorNames">{{chosenAuthor}}
+      <span class="author-search__close" (click)="removeAuthor(chosenAuthor)"></span>
+    </li>
+  </ul>
+</div>

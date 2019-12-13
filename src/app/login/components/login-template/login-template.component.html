@@ -4,16 +4,16 @@
     <h2 class="login-form__header">Login</h2>
     <div class="login-form__inputs-wrapper">
       <label class="login-form__label"> Email:
-        <input class="login-form__input-field" [(ngModel)]="login" name="login" type="text"/>
+        <input class="login-form__input-field" name="login" type="text" [formControl]="loginControl"/>
       </label>
       <span *ngIf="isLoginFailed$ | async" class="login-form__error-message">Wrong email!</span>
       <label class="login-form__label"> Password:
-        <input class="login-form__input-field" type="password" [(ngModel)]="password" name="pass" />
+        <input class="login-form__input-field" type="password" [formControl]="passwordControl" name="pass" />
       </label>
     </div>
     <div class="login-form__controls">
     <a class="login-form__link" href="javascript:void(0)">Forgot password?</a>
-    <button class="login-form__button" type="submit" (click)="loginHandler(login, password)">Login</button>
+    <button class="login-form__button" type="submit" (click)="loginHandler()">Login</button>
     </div>
   </form>
 </section>
